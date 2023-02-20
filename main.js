@@ -1,19 +1,7 @@
 
 alert("Abrir la consola o presione F12")
 
-let continuar = true;
-let numMayor = 0 
-let numActual;
-let mensaje = "Sus números son: ";
+let num1 = Number(prompt("Ingrese el primer sumando"));
+let num2 = Number(prompt("Ingrese segundo sumando"));
 
-while(continuar){
-    numActual = Number(prompt("Ingrese un número"));
-
-    if(numActual>numMayor){
-        numMayor = numActual;
-    }
-    mensaje += `${numActual}`
-    continuar = Number(prompt("Si desea continuar presione 1, de lo contrario presione 0"));
-}
-
-alert(`${mensaje} el numero mayor es ${numMayor}`)
+alert (`${num1} + ${num2} = ${num1+num2}`)
