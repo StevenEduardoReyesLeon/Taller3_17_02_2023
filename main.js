@@ -1,15 +1,19 @@
 
 alert("Abrir la consola o presione F12")
 
-let num1 = Number(prompt("Ingrese un número"))
-let num2 = Number(prompt("Ingrese un nuevo número"))
+let continuar = true;
+let numMayor = 0 
+let numActual;
+let mensaje = "Sus números son: ";
 
-if(num1 > num2){
-    console.log(`El número ${num1} es mayor que ${num2}`)
-}else{
-    if(num1 == num2){
-        console.error("Intentelo nuevamente números iguales")
-    }else if( num1 < num2 ){
-        console.log(`El número ${num2} es mayor que ${num1}`)
+while(continuar){
+    numActual = Number(prompt("Ingrese un número"));
+
+    if(numActual>numMayor){
+        numMayor = numActual;
     }
+    mensaje += `${numActual}`
+    continuar = Number(prompt("Si desea continuar presione 1, de lo contrario presione 0"));
 }
+
+alert(`${mensaje} el numero mayor es ${numMayor}`)
